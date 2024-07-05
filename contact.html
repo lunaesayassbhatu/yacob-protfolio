@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03356609e5.js" crossorigin="anonymous"></script> <!-- Make sure this line is included -->
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    
+    color: #fff;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-quarter {
+    width: 50%; /* Occupy 25% of the screen */
+    height: 100%; /* Full height */
+    background-image: url('images/background.png'); /* Ensure the path is correct */
+    background-size: cover; /* Cover the entire area */
+    background-position: 100px center right; /* Center the image */
+}
+
+.right-three-quarters {
+    width: 75%; /* Occupy the remaining 75% of the screen */
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-start; /* Align content to the top */
+    padding-right: 30px; /* Adjust padding as needed */
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.sub-title{
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+    margin-top: -100vh;
+    
+}
+.sub-title {
+    text-align: center;
+    margin-top: 30px; /* Reduce margin-top */
+    margin-bottom: -20px; /* Reduce margin-bottom */
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px; /* Reduce padding */
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 10px; /* Reduce margin-bottom */
+}
+
+.layer a {
+    margin-top: 10px; /* Reduce margin-top */
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 1px auto; /* Reduce margin */
+    width: fit-content;
+    border: 1px solid;
+    padding: 10px 30px; /* Reduce padding */
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    margin-bottom: -50px;
+}
+
+.btn:hover {
+    background-color: #ff004f;
+}
+#contact{
+    padding: 0px;
+    margin-top: 0vh;
+    margin-bottom: 0;
+    
+}
+.html {
+    overflow-y: hidden;
+}
+
+.contact-left {
+    flex-basis: 35%;
+    margin-left: 20px;
+    padding-top: 0px; /* Reduce padding-top */
+    margin-top: 50px; /* Reduce margin-top */
+}
+
+.contact-left h1 {
+    margin-left: -15vh; /* Reset margin-left to avoid large negative value */
+    margin-bottom: 40px; /* Add margin-bottom for spacing */
+    color: #0a0303;
+}
+
+.contact-left p {
+    margin-right: 50px;
+    padding-left: 20px; /* Ensure consistent padding */
+    margin-top: 5px; /* Reduce margin-top */
+    margin-bottom: 20px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+    padding-top: 20px; /* Reduce padding-top */
+}
+
+.social-icons {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333; /* Adjust color as needed */
+            margin-right: 10px; /* Add space between icons */
+            font-size: 25px;
+            transition: 0.5s;
+            
+        }
+
+        .social-icons i {
+            margin-right: 5px; /* Space between icon and text */
+        }
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+
+.btn.btn3 {
+    display: inline-block;
+    background: #ff004f; /* Initial background color */
+    margin-left: 350px; 
+    transform: translateX(-50%);
+}
+.btn.btn3:hover {
+    background-color: black; /* Background turns black on hover */
+    color: white; /* Text turns white on hover */
+    
+}
+
+.btn.btn3:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align line to start from the left */
+}
+
+.contact-right form {
+    width: 100%;
+    padding-top: -50px;
+    margin-top: 60px;
+    
+}
+
+form input, form textarea {
+    width: 95%;
+    border: 0;
+    outline: none;
+    background: #7b7979;
+    padding: 10px; /* Ensure consistent padding */
+    margin: 10px 0; /* Ensure consistent margin */
+    color: #fff; /* Corrected color property */
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 10px; /* Ensure consistent padding */
+    font-size: 18px;
+    margin-top: 10px; /* Ensure consistent margin-top */
+    cursor: pointer;
+}
+    ::placeholder {
+    color: #4e4c4d; /* Change this to the desired color */
+    
+}
+.container1 {
+    margin-top: 0px;
+    margin-bottom: 0px; /* Reset margin-bottom */
+    padding-bottom: 0vh; /* Add padding-bottom to avoid content overflow */
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0; /* Ensure consistent padding */
+    background: #262626;
+    font-weight: 300;
+    margin-top: 150px; /* Ensure consistent margin-top */
+    margin-bottom: -100vh;
+}
+
+.copyright i {
+    color: #ff004f;
+    
+}
+#msg{
+    margin-top: -40px;
+    display: block;
+
+}
+ </style>
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a href="https://accounts.google.com/v3/signin/challenge/pwd?TL=AC3PFD7dLHEWu8UOakYb9XUCynyaxXu1uZ3hwzMbHZ13cQ-RTuMMA1SrxjEWtuux&checkConnection=youtube:481&checkedDomains=youtube&cid=1&continue=https://mail.google.com/mail/u/0/&ddm=0&emr=1&flowName=GlifWebSignIn&followup=https://mail.google.com/mail/u/0/&hl=en_US&ifkv=AS5LTATpme0IVM-NCl7aFLeKm6g4_sbcQAfkO4sdhjjSpofg3GrTsgCLSYM6efKJ8vug5SocfX0&osid=1&pstMsg=1&service=mail"><i class="fas fa-envelope"></i> yacob.t.tesfaldet@gmail.com</a>
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="Email" placeholder="Your Email " required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    <div class="container1">
+        <div class="copyright">
+            <p>© 2024 Luna Sbahtu. All rights reserved. </p>
+        </div>
+    </div>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+
+        
+    }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoBqiUuoGbFM4hrje5OraaN2SrdJCBHQmcGqOFRtGCIe9NMWPNhODxQkRmePa3tiCovA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+
+                 },5000)
+                 form.reset()
+                })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
+    
+</body>
+</html>
+
+
+

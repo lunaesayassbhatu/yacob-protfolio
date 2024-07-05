@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/03356609e5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="left-quarter">
+            <div class="logo">
+            
+                <img src="images/logo.png" class="logo">
+            </div>
+            <div class="home-img">
+                <img src="images/WhatsApp Image 2024-06-29 at 17.21.25_00baa4a2.jpg" alt="">
+            </div>
+        </div>
+        <div class="right-three-quarters">
+            <nav>
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-text">
+                    <br>
+                    <h1> Yacob T. Tesfaldet </h1>
+                        <p><br> I have over seven years of experience in research and higher education, specializing in environmental management, GIS, remote sensing, and environmental data science. My enthusiasm for multidisciplinary collaboration and working in diverse environments drives my commitment to addressing complex environmental challenges holistically. I thrive on the exchange of ideas and knowledge, recognizing the importance of transcending disciplinary boundaries. With a steadfast dedication to advancing environmental science, I aim to contribute significantly through research, teaching, and collaboration.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/yacob-t-tesfaldet-929521151/" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.researchgate.net/profile/Yacob-Tesfaldet" class="researchgate"><i class="fa-brands fa-researchgate"></i></a>
+                    <a href="https://github.com/jacobins3" class="github"><i class="fab fa-github"></i></a>
+                    <a href="https://orcid.org/0000-0002-3763-6913" class="orcid"><i class="fa-brands fa-orcid"></i></a>
+                    
+                    <a href="https://scholar.google.co.th/citations?user=HSXZDDkAAAAJ&hl=en" class="googlescholar"><i class="fa-brands fa-google-scholar"></i></a>
+                    <a href="https://www.webofscience.com/wos/author/record/Y-6582-2019" class="wos"><img src="images/wos.png" alt="Clarivate Analytics" width="25" height="25">
+                <a href="images/Luna.I.Sbahtu Resume (1).pdf" download class="btn btn2">Download CV</a>
+                
+                
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoBqiUuoGbFM4hrje5OraaN2SrdJCBHQmcGqOFRtGCIe9NMWPNhODxQkRmePa3tiCovA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+
+                 },5000)
+                 form.reset()
+                })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+    
+</body>
+
+</html>
